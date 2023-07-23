@@ -47,3 +47,14 @@ resource "google_compute_router_nat" "my-nat_manual" {
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
   }
 }
+
+resource "google_compute_firewall" "my-firewall" {
+  name    = "${(var.firewall_name)}-icmp"
+  network = google_compute_network.my-vpc.name
+
+  allow {
+    protocol = "icmp"
+  }
+  source_ranges = ["0.0.0.0/0"]
+  priority = 65535
+}

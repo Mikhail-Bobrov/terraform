@@ -31,6 +31,7 @@ subnets = [
 router_name = "my-test-router"
 nat_name = "my-nat-test"
 nat_select_index = "1"  #### number of subnet that give nat  (in this case its my-terraform-subnet-internal) ######
+firewall_name = "test-my-firewall-allow"
 #  {
 #    name          = "my-subnet-database"
 #    ip_cidr_range = "10.10.22.0/24"

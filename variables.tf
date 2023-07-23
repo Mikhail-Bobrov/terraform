@@ -25,3 +25,7 @@ variable "nat_name" {
 variable "nat_select_index" {
   description = "nat number what provide index of subnets"
 }
+
+variable "firewall_name" {
+  description = "name firewall"
+}
