@@ -5,7 +5,8 @@ subnets = [
   {
     name          = "my-terraform-subnet-external"
     ip_cidr_range = "10.10.20.0/24"
-    private_ip_google_access = true
+    private_ip_google_access = false
+    nat           = false
     secondary_ip_ranges = [
       {
         range_name    = "secondary-subnet-other"
@@ -16,7 +17,8 @@ subnets = [
   {
     name          = "my-terraform-subnet-internal"
     ip_cidr_range = "10.10.21.0/24"
-    private_ip_google_access = false
+    private_ip_google_access = true
+    nat           = true
     secondary_ip_ranges = [
       {
         range_name    = "secondary-subnet-service"
@@ -27,7 +29,10 @@ subnets = [
         ip_cidr_range = "10.1.0.0/16"
       }
     ]
-  }
+  }]
+router_name = "my-test-router"
+nat_name = "my-nat-test"
+nat_select_index = "1"  #### number of subnet that give nat  (in this case its my-terraform-subnet-internal) ######
 #  {
 #    name          = "my-subnet-database"
 #    ip_cidr_range = "10.10.22.0/24"
@@ -39,4 +44,3 @@ subnets = [
 #      }
 #    ]
 #  }
-]
