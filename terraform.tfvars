@@ -6,7 +6,6 @@ subnets = [
     name          = "my-terraform-subnet-external"
     ip_cidr_range = "10.10.20.0/24"
     private_ip_google_access = false
-    nat           = false
     secondary_ip_ranges = [
       {
         range_name    = "secondary-subnet-other"
@@ -18,7 +17,6 @@ subnets = [
     name          = "my-terraform-subnet-internal"
     ip_cidr_range = "10.10.21.0/24"
     private_ip_google_access = true
-    nat           = true
     secondary_ip_ranges = [
       {
         range_name    = "secondary-subnet-service"
