@@ -1,0 +1,10 @@
+serviceAccount:
+  name: "autoscaler"
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::193376957191:role/eks_cluster_autoscaler"
+aws:
+  defaultInstanceProfile: "Karpenter_eks_cluster_autoscaler"
+clusterEndpoint: "https://AE53000216E60896212F6C232178E445.gr7.eu-west-2.eks.amazonaws.com"
+replicas: 1
+clusterName: "test_eks"
+version: v0.33.2

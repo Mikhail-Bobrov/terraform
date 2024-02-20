@@ -1,0 +1,10 @@
+name = "test"
+region = "eu-west-2"
+project = "my_test"
+env = "stage3"
+database_port = "5433"
+storage_capacity = 20
+#storage_capacity_auto = 40
+database_type = "postgres"
+database_version = "14.8"
+multi_az = false

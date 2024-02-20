@@ -1,0 +1,6 @@
+.vscode/
+.idea
+*.log
+**/.terraform
+**/.terraform.lock.hcl
+*.tgz

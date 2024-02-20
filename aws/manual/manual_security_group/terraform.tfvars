@@ -1,0 +1,11 @@
+secret_key = "key"
+access_key = "key"
+name = "test123"
+region = "eu-west-2"
+env = "stage"
+#sg_ingress = ["80","443"]
+#sg_allow_ssh = true  
+#sg_allow_ssh_subnet = "10.10.0.0/32"
+#sg_ssh_custom_port = 2202
+#sg_basic_rules = true    ### to create security_group with 80 443 different from sg_ingress
+#vpc_tag_name = "vpc_name" #to find out id 

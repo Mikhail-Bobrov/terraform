@@ -1,0 +1,17 @@
+rbac:
+  serviceAccount:
+    annotations: 
+      eks.amazonaws.com/role-arn: ${iam_role}
+    name: "autoscaler"
+autoDiscovery:
+  clusterName: ${cluster_name1}_${cluster_name2}
+
+image:
+  tag: v1.26.2
+resources:
+  limits:
+    cpu: 100m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 300Mi
